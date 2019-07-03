@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Store_BillingModelStoreContainer" CdmEntityContainer="Store_BillingEntities">
+    <EntitySetMapping Name="AdminDetails">
+      <EntityTypeMapping TypeName="Store_BillingModel.AdminDetail">
+        <MappingFragment StoreEntitySet="AdminDetails">
+          <ScalarProperty Name="Last_LoggedOut_Time" ColumnName="Last LoggedOut Time" />
+          <ScalarProperty Name="Last_LoggedIn_Time" ColumnName="Last LoggedIn Time" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashierDetails">
+      <EntityTypeMapping TypeName="Store_BillingModel.CashierDetail">
+        <MappingFragment StoreEntitySet="CashierDetails">
+          <ScalarProperty Name="Last_LoggedOut_Time" ColumnName="Last LoggedOut Time" />
+          <ScalarProperty Name="Last_LoggedIn_Time" ColumnName="Last LoggedIn Time" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CashierID" ColumnName="CashierID" />
+          <ScalarProperty Name="CashierName" ColumnName="CashierName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesDetails">
+      <EntityTypeMapping TypeName="Store_BillingModel.SalesDetail">
+        <MappingFragment StoreEntitySet="SalesDetails">
+          <ScalarProperty Name="SalesDate" ColumnName="SalesDate" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="BillNos" ColumnName="BillNos" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockDetails">
+      <EntityTypeMapping TypeName="Store_BillingModel.StockDetail">
+        <MappingFragment StoreEntitySet="StockDetails">
+          <ScalarProperty Name="ProductAddedBy" ColumnName="ProductAddedBy" />
+          <ScalarProperty Name="ProductDescription" ColumnName="ProductDescription" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="QuantityAvailable" ColumnName="QuantityAvailable" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

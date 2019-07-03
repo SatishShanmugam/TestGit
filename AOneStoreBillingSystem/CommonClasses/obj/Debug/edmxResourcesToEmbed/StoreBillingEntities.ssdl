@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Store_BillingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdminDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdminName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Last LoggedIn Time" Type="datetime" />
+    <Property Name="Last LoggedOut Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CashierDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CashierName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CashierID" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MobileNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Last LoggedIn Time" Type="datetime" />
+    <Property Name="Last LoggedOut Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SalesDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BillNos" Type="bigint" Nullable="false" />
+    <Property Name="ProductId" Type="bigint" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Quantity" Type="bigint" Nullable="false" />
+    <Property Name="TotalPrice" Type="money" Nullable="false" />
+    <Property Name="SalesDate" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StockDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductId" Type="bigint" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="QuantityAvailable" Type="bigint" Nullable="false" />
+    <Property Name="Price" Type="money" Nullable="false" />
+    <Property Name="ProductDescription" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProductAddedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Store_BillingModelStoreContainer">
+    <EntitySet Name="AdminDetails" EntityType="Self.AdminDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CashierDetails" EntityType="Self.CashierDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalesDetails" EntityType="Self.SalesDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StockDetails" EntityType="Self.StockDetails" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
